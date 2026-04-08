@@ -9,15 +9,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --sage: #6b8f71;
-    --sage-light: #f0f4f0;
-    --sage-mid: #d4e4d6;
-    --warm: #f7f5f0;
-    --text: #2c2c2a;
-    --text-muted: #6b6b67;
-    --text-light: #9a9a96;
-    --border: rgba(44,44,42,0.1);
+    --sage: #6c63ff;
+    --sage-light: #f0eeff;
+    --sage-mid: #c4beff;
+    --warm: #0a0a12;
+    --text: #f0eeff;
+    --text-muted: #b0a8e0;
+    --text-light: #6e68a0;
+    --border: rgba(108,99,255,0.2);
     --radius: 12px;
+    --card-bg: #12101e;
   }
 
   html { scroll-behavior: smooth; }
@@ -33,7 +34,7 @@
   /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(247,245,240,0.92);
+    background: rgba(10,10,18,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 1rem 2rem;
@@ -43,7 +44,7 @@
     font-family: 'Lora', serif;
     font-size: 1.1rem;
     letter-spacing: 0.01em;
-    color: var(--text);
+    color: #f0eeff;
     text-decoration: none;
   }
   .nav-links { display: flex; gap: 2rem; }
@@ -93,7 +94,7 @@
   }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
   .btn-primary {
-    background: var(--sage);
+    background: #6c63ff;
     color: #fff;
     padding: 0.85rem 2rem;
     border-radius: 50px;
@@ -103,7 +104,7 @@
     letter-spacing: 0.02em;
     transition: background 0.2s, transform 0.15s;
   }
-  .btn-primary:hover { background: #5a7a60; transform: translateY(-1px); }
+  .btn-primary:hover { background: #5550d4; transform: translateY(-1px); }
   .btn-secondary {
     background: transparent;
     color: var(--text-muted);
@@ -114,7 +115,7 @@
     font-size: 0.9rem;
     transition: border-color 0.2s, color 0.2s;
   }
-  .btn-secondary:hover { border-color: var(--sage); color: var(--sage); }
+  .btn-secondary:hover { border-color: #6c63ff; color: #6c63ff; }
 
   .scroll-hint {
     margin-top: 4rem;
@@ -128,7 +129,7 @@
     content: '';
     display: block;
     width: 1px; height: 40px;
-    background: var(--sage-mid);
+    background: rgba(108,99,255,0.4);
   }
 
   /* SECTION SHARED */
@@ -151,7 +152,7 @@
   }
 
   /* ABOUT */
-  #about { background: #fff; }
+  #about { background: #12101e; }
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -161,8 +162,8 @@
   }
   .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
   .about-note {
-    background: var(--sage-light);
-    border-left: 3px solid var(--sage);
+    background: rgba(108,99,255,0.1);
+    border-left: 3px solid #6c63ff;
     padding: 1.25rem 1.5rem;
     border-radius: 0 var(--radius) var(--radius) 0;
     font-size: 0.9rem;
@@ -171,7 +172,7 @@
   }
 
   /* WHAT I OFFER */
-  #offer { background: var(--warm); }
+  #offer { background: #0a0a12; }
   .offer-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -179,14 +180,14 @@
     margin-top: 2.5rem;
   }
   .offer-card {
-    background: #fff;
+    background: #1a1730;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1.5rem;
   }
   .offer-icon {
     width: 40px; height: 40px;
-    background: var(--sage-light);
+    background: rgba(108,99,255,0.15);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 1rem;
@@ -203,7 +204,7 @@
   /* NOT OFFER */
   .not-section {
     margin-top: 3rem;
-    background: #fff;
+    background: #1a1730;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1.75rem 2rem;
@@ -229,20 +230,20 @@
   }
 
   /* HOW IT WORKS */
-  #how { background: #fff; }
+  #how { background: #12101e; }
   .steps { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
   .step { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
   .step:not(:last-child)::before {
     content: '';
     position: absolute;
     left: 19px; top: 40px; bottom: 0;
-    width: 1px; background: var(--sage-mid);
+    width: 1px; background: rgba(108,99,255,0.3);
   }
   .step-num {
     width: 40px; height: 40px; flex-shrink: 0;
     border-radius: 50%;
-    border: 1px solid var(--sage-mid);
-    background: var(--sage-light);
+    border: 1px solid rgba(108,99,255,0.4);
+    background: rgba(108,99,255,0.15);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.8rem;
     color: var(--sage);
@@ -260,7 +261,7 @@
   /* CONNECT */
   #connect { background: var(--warm); }
   .connect-box {
-    background: #fff;
+    background: #1a1730;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 2.5rem;
@@ -270,8 +271,8 @@
   .connect-box p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 440px; margin-left: auto; margin-right: auto; }
   .discord-tag {
     display: inline-block;
-    background: var(--sage-light);
-    border: 1px solid var(--sage-mid);
+    background: rgba(108,99,255,0.08);
+    border: 1px solid rgba(108,99,255,0.25);
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
     font-family: 'DM Sans', monospace;
@@ -292,10 +293,10 @@
   .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--sage-mid); display: inline-block; }
 
   /* T&C */
-  #terms { background: #fff; }
+  #terms { background: #12101e; }
   .terms-box {
-    background: var(--sage-light);
-    border: 1px solid var(--sage-mid);
+    background: rgba(108,99,255,0.08);
+    border: 1px solid rgba(108,99,255,0.25);
     border-radius: var(--radius);
     padding: 2.5rem;
     margin-top: 2rem;
@@ -458,7 +459,7 @@
         <div class="step-num">1</div>
         <div class="step-content">
           <h3>Send me an email</h3>
-          <p>Email me at marcopoulter@gmail.com with a brief intro — who you are, what's on your mind, and what you're looking for. There's no right or wrong way to write it. I'll read it personally and reply within 24 hours.</p>
+          <p>Email me at <strong>marcopoulter&#64;gmail&#46;com</strong> with a brief intro — who you are, what's on your mind, and what you're looking for. There's no right or wrong way to write it. I'll read it personally and reply within 24 hours.</p>
         </div>
       </div>
       <div class="step">
@@ -494,7 +495,7 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background: #fff;">
+<section id="faq" style="background: #1a1730;">
   <div class="section-inner">
     <p class="section-label">FAQ</p>
     <h2 class="section-title">Common questions</h2>
@@ -581,7 +582,7 @@
     <p class="section-label">Pricing</p>
     <h2 class="section-title">Simple, honest pricing</h2>
     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">No hidden fees. No subscriptions. Just pay for the time we spend together.</p>
-    <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+    <div style="background: #1a1730; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
       <div>
         <div style="font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 400; color: var(--sage);">€15 <span style="font-size: 1rem; color: var(--text-muted); font-family: 'DM Sans', sans-serif;">/ hour</span></div>
         <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.4rem;">Payment details shared after your first email.</p>
@@ -602,7 +603,7 @@
     <h2 class="section-title">Ready to talk?</h2>
     <div class="connect-box">
       <p>Send me an email expressing your interest and a little about what's on your mind — as much or as little as you like. I'll reply personally and we'll take it from there.</p>
-      <a href="/cdn-cgi/l/email-protection#a2cfc3d0c1cdd2cdd7ced6c7d0e2c5cfc3cbce8cc1cdcf" class="btn-primary" style="display: inline-block; margin-bottom: 1.5rem;"><span class="__cf_email__" data-cfemail="137e7261707c637c667f67766153747e727a7f3d707c7e">[email&#160;protected]</span></a>
+      <a href="mailto:marcopoulter&#64;gmail&#46;com" class="btn-primary" style="display: inline-block; margin-bottom: 1.5rem;">marcopoulter&#64;gmail&#46;com</a>
       <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0;">I aim to reply within 24 hours. Once we've connected by email, I'll share how we can speak.</p>
     </div>
   </div>
@@ -659,13 +660,4 @@ function toggleFaq(btn) {
   var answer = btn.nextElementSibling;
   var arrow = btn.querySelector('.faq-arrow');
   var isOpen = answer.classList.contains('open');
-  document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
-  document.querySelectorAll('.faq-arrow').forEach(function(a) { a.classList.remove('open'); });
-  if (!isOpen) {
-    answer.classList.add('open');
-    arrow.classList.add('open');
-  }
-}
-</script>
-</body>
-</html>
+  document.querySelectorAll('.faq-a').forEach(function(a) { a.classLis
